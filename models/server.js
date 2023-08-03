@@ -1,5 +1,5 @@
 const express = require('express')
-const cors = require('cors');
+
 const {dbConnection} = require('../database/config')
 
 class Server{
@@ -28,7 +28,7 @@ class Server{
 
     middlewares(){
         //cors
-        this.app.use(cors());
+        
         //leer lo q el usuario envia por el cuerpo de la peticion
         this.app.use(express.json());
         //definir la carpeta publica
